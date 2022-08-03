@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button android:id="@+id/bobi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:backgroundTint="@color/red"
+        android:text="Bobi" />
+
+    <!--
+        You could add this attribute to change the background
+        android:background="@drawable/bg_custom"
+
+        However, it's only applied if your default theme is not Material.
+
+        To see this working, add the android:background attribute to a Button
+        and update the themes.xml.
+
+        Replace:
+
+        parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+
+        With:
+
+        parent="Theme.AppCompat.DayNight.DarkActionBar">
+    -->
+
+    <Button android:id="@+id/rex"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bobi"
+        android:layout_alignStart="@id/bobi"
+        android:backgroundTint="@color/green"
+        android:text="Rex" />
+
+    <Button android:id="@+id/luna"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rex"
+        android:layout_alignStart="@id/rex"
+        android:backgroundTint="@color/yellow"
+        android:text="Luna" />
+
+    <Button android:id="@+id/max"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/luna"
+        android:layout_alignStart="@id/luna"
+        android:backgroundTint="@color/blue"
+        android:text="Max" />
+
+</RelativeLayout>

@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">HarbourUnsplash</string>
+
+    <string name="hello_world">Hola mundo!</string>
+
+    <string name="event_create">EnCrear!</string>
+    <string name="event_resume">EnResumen!</string>
+    <string name="event_pause">EnPausa!</string>
+    <string name="event_destroy">EnDestruir!</string>
+</resources>

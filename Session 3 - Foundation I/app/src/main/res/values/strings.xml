@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">HarbourUnsplash</string>
+
+    <string name="hello_world">Hello world!</string>
+
+    <string name="event_create">OnCreate!</string>
+    <string name="event_resume">OnResume!</string>
+    <string name="event_pause">OnPause!</string>
+    <string name="event_destroy">OnDestroy!</string>
+
+    <!-- Animals -->
+    <string name="animal_bobi">Bobi</string>
+    <string name="animal_rex">Rex</string>
+    <string name="animal_luna">Luna</string>
+    <string name="animal_max">Max</string>
+
+</resources>
