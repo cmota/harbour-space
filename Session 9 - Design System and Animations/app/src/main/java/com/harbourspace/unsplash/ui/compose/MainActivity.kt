@@ -101,7 +101,7 @@ class MainComposeActivity : AppCompatActivity() {
             val isDarkTheme = remember { mutableStateOf(isDarkThemeEnabled()) }
 
             MaterialTheme(
-                colors = if(isDarkTheme.value) colorLightPalette else colorDarkPalette,
+                colors = if(isDarkTheme.value) colorDarkPalette else colorLightPalette,
                 typography = typography
             ) {
 
