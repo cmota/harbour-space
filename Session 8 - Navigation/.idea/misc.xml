@@ -4,6 +4,7 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="app/src/main/res/drawable/bg_custom.xml" value="0.1535" />
+        <entry key="app/src/main/res/drawable/bg_custom_bottom.xml" value="0.165" />
         <entry key="app/src/main/res/drawable/bg_custom_pressed.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/bg_selector.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/ic_home.xml" value="0.119" />

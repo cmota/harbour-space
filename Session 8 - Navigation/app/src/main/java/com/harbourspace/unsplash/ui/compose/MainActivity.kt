@@ -1,4 +1,4 @@
-package com.harbourspace.unsplash.compose
+package com.harbourspace.unsplash.ui.compose
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -6,22 +6,17 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.activity.compose.setContent
 import androidx.activity.viewModels
-import androidx.annotation.DrawableRes
 import androidx.annotation.StringRes
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.KeyboardActions
 import androidx.compose.foundation.text.KeyboardOptions
@@ -40,7 +35,6 @@ import androidx.compose.material.TabRowDefaults
 import androidx.compose.material.TabRowDefaults.tabIndicatorOffset
 import androidx.compose.material.Text
 import androidx.compose.material.TextFieldDefaults
-import androidx.compose.material.TopAppBar
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.livedata.observeAsState
@@ -49,11 +43,9 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.RectangleShape
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
-import androidx.compose.ui.res.stringArrayResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.ImeAction
@@ -70,15 +62,15 @@ import coil.request.ImageRequest
 import com.google.accompanist.swiperefresh.SwipeRefresh
 import com.google.accompanist.swiperefresh.SwipeRefreshIndicator
 import com.google.accompanist.swiperefresh.rememberSwipeRefreshState
-import com.harbourspace.unsplash.DetailsActivity
+import com.harbourspace.unsplash.ui.legacy.DetailsActivity
 import com.harbourspace.unsplash.R
 import com.harbourspace.unsplash.UnsplashViewModel
-import com.harbourspace.unsplash.compose.collections.AddCollectionsContent
-import com.harbourspace.unsplash.compose.images.AddImagesContent
-import com.harbourspace.unsplash.compose.navigation.BottomNavigationScreens
+import com.harbourspace.unsplash.ui.compose.collections.AddCollectionsContent
+import com.harbourspace.unsplash.ui.compose.images.AddImagesContent
+import com.harbourspace.unsplash.ui.compose.navigation.BottomNavigationScreens
 import com.harbourspace.unsplash.model.UnsplashCollection
 import com.harbourspace.unsplash.model.UnsplashItem
-import com.harbourspace.unsplash.utils.EXTRA_UNSPLASH_IMAGE
+import com.harbourspace.unsplash.utils.EXTRA_UNSPLASH_IMAGE_URL
 
 private enum class Tab(@StringRes val tab: Int) {
     HOME(R.string.main_tab_images),
@@ -136,7 +128,7 @@ class MainComposeActivity : AppCompatActivity() {
 
     private fun openDetailsActivity(url: String) {
         val intent = Intent(this, DetailsActivity::class.java)
-        intent.putExtra(EXTRA_UNSPLASH_IMAGE, url)
+        intent.putExtra(EXTRA_UNSPLASH_IMAGE_URL, url)
 
         startActivity(intent)
     }

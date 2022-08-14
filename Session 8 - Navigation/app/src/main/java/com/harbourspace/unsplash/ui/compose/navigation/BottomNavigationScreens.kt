@@ -1,4 +1,4 @@
-package com.harbourspace.unsplash.compose.navigation
+package com.harbourspace.unsplash.ui.compose.navigation
 
 import androidx.annotation.DrawableRes
 import androidx.annotation.StringRes

@@ -1,4 +1,4 @@
-package com.harbourspace.unsplash.compose.images
+package com.harbourspace.unsplash.ui.compose.collections
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
@@ -10,14 +10,12 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import com.harbourspace.unsplash.compose.AddUnsplashImage
-import com.harbourspace.unsplash.compose.AddUserInputAction
-import com.harbourspace.unsplash.model.UnsplashItem
+import com.harbourspace.unsplash.ui.compose.AddUnsplashImage
+import com.harbourspace.unsplash.model.UnsplashCollection
 
 @Composable
-fun AddImagesContent(
-    unsplashItems: List<UnsplashItem>,
-    onSearchAction: (String) -> Unit,
+fun AddCollectionsContent(
+    unsplashCollections: List<UnsplashCollection>,
     onOpenDetailsActivity: (String) -> Unit
 ) {
     LazyColumn(
@@ -25,27 +23,16 @@ fun AddImagesContent(
             .fillMaxSize()
             .padding(start = 16.dp, end = 16.dp, top = 16.dp)
     ) {
-        item {
-            AddUserInputAction(
-                onSearchAction = {
-                    onSearchAction(it)
-                }
-            )
-        }
 
-        item {
-            Spacer(modifier = Modifier.height(16.dp))
-        }
-
-        items(unsplashItems) {
+        items(unsplashCollections) {
 
             Column(
                 modifier = Modifier.fillMaxSize()
             ) {
 
                 AddUnsplashImage(
-                    url = it.urls.regular,
-                    description = it.description ?: "",
+                    url = it.cover_photo.urls.regular,
+                    description = it.title,
                     author = it.user.username,
                     onOpenDetailsActivity = onOpenDetailsActivity
                 )

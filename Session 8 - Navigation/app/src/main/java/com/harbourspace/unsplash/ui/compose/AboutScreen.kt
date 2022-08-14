@@ -1,4 +1,4 @@
-package com.harbourspace.unsplash.compose
+package com.harbourspace.unsplash.ui.compose
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
