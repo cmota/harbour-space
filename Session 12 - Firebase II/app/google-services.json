@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "700069548647",
+    "project_id": "harbourspace-unsplash",
+    "storage_bucket": "harbourspace-unsplash.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:700069548647:android:5c239e6ed0159b77defac2",
+        "android_client_info": {
+          "package_name": "com.harbourspace.unsplash"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "700069548647-0uesk1v2t16rl8rgfha8gk0mv3ckdo76.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDcFz3FbZ2TAjaweyy1auVY6V6RaPazuOg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "700069548647-0uesk1v2t16rl8rgfha8gk0mv3ckdo76.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
